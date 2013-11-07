@@ -1,14 +1,13 @@
-springrts-vagrant
-=================
+# Spring RTS vagrant
 
 Startings of a Vagrant environment for building spring
 
-# Requirements
+## Requirements
 
  - Vagrant
  - Virtualbox
 
-# Usage
+## Usage
 
 To use, clone this repository, then from the terminal, execute `vagrant up` in the root folder. An Ubuntu 10 virtual machine will be created, and the necessary dependencies provisioned. This may take a few minutes.
 

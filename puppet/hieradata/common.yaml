@@ -57,11 +57,7 @@ server:
         - libfreetype6-dev
         - p7zip-full
         - libxcursor-dev
-        - libboost-thread-dev
-        - libboost-regex-dev
-        - libboost-system-dev
-        - libboost-program-options-dev
-        - libboost-signals-dev
+        - libboost-dev
         - vim
     dot_files:
         -

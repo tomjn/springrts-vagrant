@@ -67,6 +67,7 @@ server:
         - libxcursor-dev
         - libboost1.48-all-dev
         - python-pygccxml
+        - maven
         - vim
     dot_files:
         -

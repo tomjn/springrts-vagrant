@@ -35,3 +35,5 @@ make spring
 # @TODO: ammend the mxe settings.mk targets and build mxe
 
 # @TODO: build springlobby 
+
+cd /home/vagrant

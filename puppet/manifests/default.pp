@@ -37,7 +37,6 @@ case $::osfamily {
   'debian': {
     class { 'apt': }
     apt::ppa { 'ppa:purplekarrot/ppa': }
-    apt::ppa { 'ppa:tobydox/mingw': }
 
     Class['::apt::update'] -> Package <|
         title != 'python-software-properties'

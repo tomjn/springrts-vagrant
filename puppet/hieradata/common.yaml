@@ -49,13 +49,10 @@ server:
         - binutils-gold
         - ccache
         - xsltproc
-        - mingw32-x-binutils
-        - mingw32-x-gcc
-        - mingw32-x-runtime
-        - mingw-x-w32api
         - docbook-xsl
         - docbook-xml
-        - openjdk-6-jre
+        - openjdk-7-jdk
+        - openjdk-7-jre
         - libglew-dev
         - libsdl-dev
         - libdevil-dev
@@ -64,8 +61,12 @@ server:
         - libvorbis-dev
         - libfreetype6-dev
         - p7zip-full
+        - zlibc
+        - zlib1g
+        - zlib1g-dev
         - libxcursor-dev
         - libboost1.48-all-dev
+        - python-pygccxml
         - vim
     dot_files:
         -

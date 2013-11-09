@@ -1,8 +1,8 @@
 ---
 vagrantfile-local:
     vm:
-        box: ubuntu-lucid10044-x64-vbox43
-        box_url: 'https://puphpet.s3.amazonaws.com/ubuntu-lucid10044-x64-vbox43.box'
+        box: precise64
+        box_url: 'http://files.vagrantup.com/precise64.box'
         hostname: null
         network:
             private_network: 192.168.56.101
@@ -48,6 +48,14 @@ server:
         - cmake-gui
         - binutils-gold
         - ccache
+        - xsltproc
+        - mingw32-x-binutils
+        - mingw32-x-gcc
+        - mingw32-x-runtime
+        - mingw-x-w32api
+        - docbook-xsl
+        - docbook-xml
+        - openjdk-6-jre
         - libglew-dev
         - libsdl-dev
         - libdevil-dev
@@ -57,7 +65,7 @@ server:
         - libfreetype6-dev
         - p7zip-full
         - libxcursor-dev
-        - libboost-dev
+        - libboost1.48-all-dev
         - vim
     dot_files:
         -

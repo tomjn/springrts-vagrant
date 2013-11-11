@@ -46,6 +46,7 @@ make
 
 #echo "compiling spring"
 #cd $ROOT/spring
+#git clone https://github.com/spring/mingwlibs.git
 #cmake -DCMAKE_TOOLCHAIN_FILE=$ROOT/mxe/usr/i686-w64-mingw32/share/cmake/mxe-conf.cmake .
 #make spring
 

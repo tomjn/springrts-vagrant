@@ -1,11 +1,13 @@
 #!/bin/bash
 
 
+ROOT=/home/vagrant
+
 echo "setting ccache size"
 ccache -M 5G
 
 echo "cloning spring"
-cd /home/vagrant
+cd $ROOT
 git clone -b master git://github.com/spring/spring.git 
 
 echo "cloning mxe"
@@ -31,9 +33,24 @@ cmake .
 echo "making spring"
 make spring
 
+echo "creating cross-env for spring & springlobby"
+cd $ROOT/mxe
+make settings.mk
+echo "MXE_TARGETS := i686-w64-mingw32" >>settings.mk
 
-# @TODO: ammend the mxe settings.mk targets and build mxe
 
-# @TODO: build springlobby 
+echo "compiling springlobby"
+cd $ROOT/springlobby
+cmake -DCMAKE_TOOLCHAIN_FILE=$ROOT/mxe/usr/i686-w64-mingw32/share/cmake/mxe-conf.cmake .
+make
 
-cd /home/vagrant
+#echo "compiling spring"
+#cd $ROOT/spring
+#git clone https://github.com/spring/mingwlibs.git
+#cmake -DCMAKE_TOOLCHAIN_FILE=$ROOT/mxe/usr/i686-w64-mingw32/share/cmake/mxe-conf.cmake .
+#make spring
+
+
+cd $ROOT
+
+

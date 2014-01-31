@@ -37,6 +37,7 @@ echo "creating cross-env for spring & springlobby"
 cd $ROOT/mxe
 make settings.mk
 echo "MXE_TARGETS := i686-w64-mingw32" >>settings.mk
+make wxwidgets curl boost
 
 
 echo "compiling springlobby"
